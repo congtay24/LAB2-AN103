@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sinh viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1.text {
+            text-align: center;
+            animation: my 700ms infinite;
+        }
+
+        @-webkit-keyframes my {
+            0% {
+                color: #F8CD0A;
+            }
+
+            50% {
+                color: #45d602;
+            }
+
+            100% {
+                color: #F8CD0A;
+            }
+        }
+
+        @-moz-keyframes my {
+            0% {
+                color: #F8CD0A;
+            }
+
+            50% {
+                color: #c810be;
+            }
+
+            100% {
+                color: #F8CD0A;
+            }
+        }
+
+        @-o-keyframes my {
+            0% {
+                color: #705b13;
+            }
+
+            50% {
+                color: #311c1c;
+            }
+
+            100% {
+                color: #0fd03c;
+            }
+        }
+
+        @keyframes my {
+            0% {
+                color: #f80a1a;
+            }
+
+            50% {
+                color: #fff;
+            }
+
+            100% {
+                color: #9315c5;
+            }
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text">Danh sách sinh viên</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% sinhviens.forEach(function(sinhvien){ %>
+                <tr>
+                    <td>
+                        <%= sinhvien.id %>
+                    </td>
+                    <td>
+                        <%= sinhvien.name %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>
